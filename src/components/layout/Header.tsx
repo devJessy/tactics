@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import {Box} from '@material-ui/core';
 
-const ScrollLink = Scroll.Link;
-
 const Landing = () => {
 
     const handleNavigate = ( handler ) => {
@@ -17,8 +15,7 @@ const Landing = () => {
             </Logo>
             <NavBar>
                 <NavList>
-                    <li style={{width : 72 }}><Link to='/#home'>Home
-          </ScrollLink></Link></li>
+                    <li style={{width : 72 }}><Link to='/#home'>Home</Link></li>
                     <li style={{width : 102 }}><Link to='/#gameplay'>GamePlay</Link></li>
                     <li style={{width : 108 }}><Link to='/#nft'>NFT Cards</Link></li>
                     <li style={{width : 114 }}><Link to="/tokenomics">Tokenomics</Link></li>
