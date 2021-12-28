@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Box} from '@material-ui/core';
 
 import { easings } from 'react-animation'
-
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 const Landing = () => {
@@ -12,21 +12,23 @@ const Landing = () => {
         animation: `pop-in ${easings.easeOutExpo} 500ms forwards`
     }
     return (
-        <CSoon id="home">
-            <ContentBox> 
-                <Box style={{...contentStyle ,flex : 5}} >
-                    <Box>
-                        <img src="/images/landing/Llogo.png" alt='' />
+        <ScrollAnimation  animateIn="fadeIn">
+            <CSoon id="home">
+                <ContentBox> 
+                    <Box style={{...contentStyle ,flex : 5}} >
+                        <Box>
+                            <img src="/images/landing/Llogo.png" alt='' />
+                        </Box>
+                        <Box pt="12px" pl="30px">
+                            <img src="/images/landing/Coming Soon.png"  alt='' /> 
+                        </Box>
                     </Box>
-                    <Box pt="12px" pl="30px">
-                        <img src="/images/landing/Coming Soon.png"  alt='' /> 
-                    </Box>
-                </Box>
-                <PlayerBox>
-                    <img src="/images/landing/Lplayer.png" alt='' />
-                </PlayerBox>
-            </ContentBox>
-        </CSoon>
+                    <PlayerBox>
+                        <img src="/images/landing/Lplayer.png" alt='' />
+                    </PlayerBox>
+                </ContentBox>
+            </CSoon>
+        </ScrollAnimation>
     )
 };
 

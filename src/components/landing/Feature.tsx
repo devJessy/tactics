@@ -1,34 +1,42 @@
-import React from "react";
+import "animate.css/animate.min.css";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import {Box} from '@material-ui/core';
+import AOS from "aos";
 
 const Feature = () => {
+    useEffect(() => {
+        AOS.init({
+        });
+      }, []);
     return (
-        <FeatureSection>
-            <FeatureTitle>
-                <img src="/images/landing/Feature.png" alt='' />
-            </FeatureTitle>
-            <FeatureContent>
-                <Section>
-                    <DescribeBox>
-                        <OwerBox />
-                        <DuelBox />
-                    </DescribeBox>
-                    <ContentImgBox>
-                        <img src="/images/landing/Priest.png" alt =""/>
-                    </ContentImgBox>
-                </Section>
-                <Section>
-                    <ContentImgBox>
-                        <img src="/images/landing/Naga.png" alt =""/>
-                    </ContentImgBox>
-                    <DescribeBox>
-                        <MarketBox />
-                        <ChestBox />
-                    </DescribeBox>
-                </Section>
-            </FeatureContent>
-        </FeatureSection>
+        
+            <FeatureSection>
+                <FeatureTitle>
+                    <img src="/images/landing/Feature.png" alt='' />
+                </FeatureTitle>
+                <FeatureContent>
+                    <Section>
+                        <DescribeBox>
+                            <OwerBox  data-aos="fade-right" data-aos-duration="1000"/>
+                            <DuelBox  data-aos="fade-right" data-aos-duration="1000"/>
+                        </DescribeBox>
+                        <ContentImgBox data-aos="fade-left" data-aos-duration="1000">
+                            <img src="/images/landing/Priest.png" alt =""/>
+                        </ContentImgBox>
+                    </Section>
+                    <Section>
+                        <ContentImgBox  data-aos="fade-right" data-aos-duration="1000">
+                            <img src="/images/landing/Naga.png" alt =""/>
+                        </ContentImgBox>
+                        <DescribeBox>
+                            <MarketBox  data-aos="fade-left" data-aos-duration="1000"/>
+                            <ChestBox  data-aos="fade-left" data-aos-duration="1000"/>
+                        </DescribeBox>
+                    </Section>
+                </FeatureContent>
+            </FeatureSection>
+        // </ScrollAnimation>
     )
 };
 

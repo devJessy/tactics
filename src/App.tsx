@@ -1,8 +1,11 @@
 import React, { useEffect, Suspense, lazy, useState } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import "aos/dist/aos.css";
+
 import Landing from './views/Landing';
 import Tokenomics from './views/Tokenomics';
+
 const App: React.FC = () => {
 
   return (

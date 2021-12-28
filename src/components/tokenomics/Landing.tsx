@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import {Box} from '@material-ui/core';
 
 import { easings } from 'react-animation'
 
 import Footer from '../../components/landing/Footer';
-
+import AOS from "aos";
 
 const Landing = () => {
-
+    useEffect(() => {
+        AOS.init({
+        });
+      }, []);
     return (
         <TokenomicsSection>
             <ContentSection>
@@ -16,7 +19,7 @@ const Landing = () => {
                     <TotalBox>
                         <img src="/images/tokenomics/total.png" />
                     </TotalBox>
-                    <AllocationBox>
+                    <AllocationBox data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                         <SummaryBox>
                             <img src="/images/tokenomics/tbl.png" />
                         </SummaryBox>

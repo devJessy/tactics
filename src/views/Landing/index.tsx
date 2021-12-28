@@ -9,6 +9,7 @@ import RoadMap from '../../components/landing/RoadMap';
 import BuiltOn from '../../components/landing/BuiltOn';
 import Footer from '../../components/landing/Footer';
 
+
 const Landing = () => {
     document.body.style.margin = '0px';
     

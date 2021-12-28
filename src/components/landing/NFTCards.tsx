@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import {Box} from '@material-ui/core';
 import { Carousel } from "components/Carousel";
+import AOS from "aos";
 
 const NFTCards = () => {
+    useEffect(() => {
+        AOS.init({
+        });
+      }, []);
     return (
         <NFTCardsSection id="nft">
             <NFTTitle>
                 <img src="/images/landing/NFT Cards.png" alt='' />
             </NFTTitle>
-            <GeneralCards>
+            <GeneralCards data-aos="fade-right" data-aos-duration="1000">
                 <Carousel style={{margin: 'auto', backgroundColor : 'transparent'}}>
                     <Box style={{flex : 2}}> <img src="/images/landing/Unicorn1.png" style={{width : '100%'}}/></Box>
                     <Box style={{flex : 2}}> <img src="/images/landing/Assasin1.png" style={{width : '100%'}}/></Box>

@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import {Box} from '@material-ui/core';
-import { animations } from 'react-animation'
+import { animations } from 'react-animation';
+import AOS from "aos";
 
 const GamePlay = () => {
-    const style = {
-        animation: animations.fadeIn
-    }
+    useEffect(() => {
+        AOS.init({
+        });
+      }, []);
     return (
-        <GamePlaySection style={style} id="gameplay">
+        <GamePlaySection id="gameplay"  data-aos="fade-up" data-aos-duration="1000">
             <Guardian>
                 <img src="/images/landing/Guardian.png" alt=''/>
             </Guardian>
             <GPCard>
+            
                 <GPTitle>
+                
                     GAMEPLAY
                 </GPTitle>
                 <GPContent>
