@@ -6,13 +6,13 @@ import { easings } from 'react-animation'
 
 
 
-const Landing = ({linkRef1}) => {
+const Landing = () => {
    
     const contentStyle = {
         animation: `pop-in ${easings.easeOutExpo} 500ms forwards`
     }
     return (
-        <CSoon ref={linkRef1}>
+        <CSoon id="home">
             <ContentBox> 
                 <Box style={{...contentStyle ,flex : 5}} >
                     <Box>
@@ -78,11 +78,7 @@ const PlayerBox = styled(Box)`
     }
 `;
 
-interface CSoonprops {
-    ref : any
-}
-
-const CSoon = styled(Box)<CSoonprops>`
+const CSoon = styled(Box)`
     background-image : url('/images/landing/Landing Tab.png');
     background-size : 100% 100%;
     background-repeat : no-repeat;

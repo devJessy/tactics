@@ -3,9 +3,9 @@ import styled from "styled-components";
 import {Box} from '@material-ui/core';
 import { Carousel } from "components/Carousel";
 
-const NFTCards = ({linkRef3}) => {
+const NFTCards = () => {
     return (
-        <NFTCardsSection ref={linkRef3}>
+        <NFTCardsSection id="nft">
             <NFTTitle>
                 <img src="/images/landing/NFT Cards.png" alt='' />
             </NFTTitle>
@@ -22,11 +22,7 @@ const NFTCards = ({linkRef3}) => {
     )
 };
 
-interface NFTCardsprops {
-    ref : any
-}
-
-const NFTCardsSection = styled(Box)<NFTCardsprops>`
+const NFTCardsSection = styled(Box)`
     background-image : url('/images/landing/NFTCardsBg.png') ; 
     background-size : 100% 100%;
     background-repeat : no-repeat;

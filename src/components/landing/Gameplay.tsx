@@ -3,12 +3,12 @@ import styled from "styled-components";
 import {Box} from '@material-ui/core';
 import { animations } from 'react-animation'
 
-const GamePlay = ({linkRef2}) => {
+const GamePlay = () => {
     const style = {
         animation: animations.fadeIn
     }
     return (
-        <GamePlaySection style={style} ref={linkRef2}>
+        <GamePlaySection style={style} id="gameplay">
             <Guardian>
                 <img src="/images/landing/Guardian.png" alt=''/>
             </Guardian>
@@ -27,11 +27,7 @@ const GamePlay = ({linkRef2}) => {
     )
 };
 
-interface GamePlayprops {
-    ref : any
-}
-
-const GamePlaySection = styled(Box)<GamePlayprops>`
+const GamePlaySection = styled(Box)`
     background-image : url('/images/landing/GamePlaybg.png') ; 
     background-size : 100% 100%;
     background-repeat : no-repeat;

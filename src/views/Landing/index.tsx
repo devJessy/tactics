@@ -11,16 +11,13 @@ import Footer from '../../components/landing/Footer';
 
 const Landing = () => {
     document.body.style.margin = '0px';
-    const linkRef1 = useRef(null);
-    const linkRef2 = useRef(null);
-    const linkRef3 = useRef(null);
-
+    
     return (
         <Box style={{backgroundColor : 'black', overflowX: 'hidden'}}>
-            <Header  linkRef1={linkRef1} linkRef2={linkRef2} linkRef3={linkRef3}/>
-            <LandingSection linkRef1={linkRef1}/>
-            <GamePlay linkRef2={linkRef2}/>
-            <NFTCards linkRef3={linkRef3}/>
+            <Header/>
+            <LandingSection/>
+            <GamePlay/>
+            <NFTCards/>
             <Feature />
             <RoadMap />
             <BuiltOn />

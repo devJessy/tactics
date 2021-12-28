@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import {Box} from '@material-ui/core';
 
-const Landing = ({ linkRef1, linkRef2, linkRef3}) => {
+const ScrollLink = Scroll.Link;
+
+const Landing = () => {
 
     const handleNavigate = ( handler ) => {
         handler.current.scrollIntoView({ behavior: 'smooth' });
@@ -15,9 +17,10 @@ const Landing = ({ linkRef1, linkRef2, linkRef3}) => {
             </Logo>
             <NavBar>
                 <NavList>
-                    <li style={{width : 72 }}><Link onClick={() => handleNavigate(linkRef1)} to='/'>Home</Link></li>
-                    <li style={{width : 102 }}><Link onClick={() => handleNavigate(linkRef2)} to='/'>GamePlay</Link></li>
-                    <li style={{width : 108 }}><Link onClick={() => handleNavigate(linkRef3)} to='/'>NFT Cards</Link></li>
+                    <li style={{width : 72 }}><Link to='/#home'>Home
+          </ScrollLink></Link></li>
+                    <li style={{width : 102 }}><Link to='/#gameplay'>GamePlay</Link></li>
+                    <li style={{width : 108 }}><Link to='/#nft'>NFT Cards</Link></li>
                     <li style={{width : 114 }}><Link to="/tokenomics">Tokenomics</Link></li>
                     <li style={{width : 119 }}><Link to="/">Ambassador</Link></li>
                 </NavList>
